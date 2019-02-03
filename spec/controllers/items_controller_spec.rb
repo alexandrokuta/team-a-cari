@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe ItemsController, type: :controller do
-
+    let(:category) { create(:category) }
   describe 'Get #detail' do
     it "正しいビューに遷移する" do
       c1 = create(:category)
@@ -22,6 +22,12 @@ describe ItemsController, type: :controller do
 
     it "カテゴリーが生成されるか" do
     end
+  end
 
+  describe 'GET #index' do
+    it "indexテンプレートが表示されるか" do
+      get :index
+      expect(response).to render_template :index
+    end
   end
 end

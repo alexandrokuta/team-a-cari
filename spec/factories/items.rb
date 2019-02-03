@@ -11,9 +11,9 @@ FactoryBot.define do
     delivery_day "1~2日で発送"
     seller_id nil
     buyer_id nil
-    category_id 80
-    brand_id nil
-    size_id nil
+    category_id 28
+    brand_id 1
+    size_id 1
     # item.create! (name: name,
     #               price: price,
     #               describe: describe,
