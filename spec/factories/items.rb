@@ -9,11 +9,13 @@ FactoryBot.define do
     delivery_method "未定"
     prefecture "大阪府"
     delivery_day "1~2日で発送"
+    category_id 80
     seller_id nil
     buyer_id nil
-    category_id 80
-    brand_id nil
-    size_id nil
+    trade 0
+    created_at { Faker::Time.between(2.days.ago, Time.now, :all) }
+    brand_id 1
+    size_id 1
     # item.create! (name: name,
     #               price: price,
     #               describe: describe,
