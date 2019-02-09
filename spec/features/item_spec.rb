@@ -2,7 +2,7 @@ require 'rails_helper'
 
 feature 'item', type: :feature do
     let(:user_a) { create(:user) }
-    let(:user_b) { create(:user, id:item_a.seller_id)}
+    let(:user_b) { create(:user, email:"change@com")}
     let(:item_a) { create(:item, seller_id: user_a.id)}
     let(:item) { create(:item) }
     let(:item_b) { build(:item) }
@@ -64,7 +64,8 @@ feature 'item', type: :feature do
     scenario "購入した商品" do
       user_a
       item_c = create(:item, seller_id: user_a.id, buyer_id: user_b.id)
-      visit "/users/#{user_a.id}/buy/now"
+      visit "/users/#{user_b.id}/buy/now"
+      save_and_open_page
       expect(page).to have_content item_c.name
     end
 

@@ -14,19 +14,5 @@ FactoryBot.define do
     category_id 80
     brand_id 2
     size_id 2
-    # item.create! (name: name,
-    #               price: price,
-    #               describe: describe,
-    #               status: status,
-    #               burden: burden,
-    #               delivery_method: delivery_method,
-    #               prefecture: prefecture,
-    #               delivery_day: delivery_day,
-    #               seller_id: seller_id,
-    #               buyer_id: buyer_id,
-    #               category_id: category_id,
-    #               brand_id: brand_id,
-    #               size_id: size_id
-    #             )
   end
 end
